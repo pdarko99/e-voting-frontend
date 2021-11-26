@@ -1,0 +1,38 @@
+
+
+<main class="container-fluid" >
+  <section>
+    <header>
+      <nav class="topmost">
+        <a class="navbar-brand" href="#">3VG</a>
+        <div>
+          <ul class="firstlist">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" (click)="register(auth)">Sign up</a>
+            </li>
+            <li class="nav-item none">
+              <a class="btn btn-primary nav-log" (click)="login(auth)" role="button">Get started ...</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+  </section>
+   
+    <section class="middle row" @fadeSlideInOut>
+      <div class="col-md-6 col-sm-12">
+        <h2 >Say hello to  a better voting 3xperience.</h2>
+        <p class="animate">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta, vitae Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, veritatis. </p>
+        <button  type="button" (click)="login(auth)" class="btn botbutt btn-primary btn-lg">start building -- it's free</button>
+      </div>
+      <div class="col-md-6 col-sm-12 none" [ngStyle]="{'display':none}">
+        <div class="formContainer" #auth>
+          <router-outlet ></router-outlet>
+        </div>
+      </div>
+    </section>
+    <app-footer ></app-footer>
+    
+  </main>
+  
+  <!-- navbar navbar-dark bg-primary -->

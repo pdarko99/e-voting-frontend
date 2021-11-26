@@ -1,0 +1,61 @@
+main{
+    position: relative;
+    background: rgb(6, 17, 47);
+    color: rgb(255, 255, 255);
+    min-height: 45.46rem;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+
+}
+
+
+section{
+    margin: auto;
+}
+
+.but{
+    text-align:center;
+}
+
+.contain{
+    width:80%;
+    margin:0 auto 0 auto;
+}
+
+
+
+table{
+    background: rgb(6, 17, 60);
+    color: rgb(255, 255, 255);
+    width: 100%;
+}
+
+.error{
+    text-align: center;
+}
+.butt{
+    text-align: right;
+}
+button{
+    border-radius:20px;
+}
+
+.modal-content{
+    background: rgb(6, 17, 60);
+}
+
+@media only screen and (max-width: 800px) {
+.example-container {
+    /* height: 600px; */
+    width: 350px;
+    max-width: 100%;
+    overflow: auto;
+  }
+
+  .po{
+      position: sticky;
+  }
+
+ 
+}

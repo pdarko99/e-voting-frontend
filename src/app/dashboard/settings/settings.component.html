@@ -1,0 +1,63 @@
+
+<app-headder></app-headder>
+<main>
+    <section>
+        <div class="card">
+            <div class="card-body">
+              <!-- <h5 class="card-title">LOGIN FORM</h5> -->
+              <form action="" #form="ngForm" (ngSubmit) ="Submit()">
+                <span *ngIf="errorOrConfrimsg">{{errorOrConfrimsg}}</span>
+        
+                <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label">Org Name</label>
+                  <input type="email"  #name = 'ngModel'  class="form-control"required name="name" [(ngModel)]="settings.name"  placeholder="princeOrg">
+                  <small [hidden] = "name.valid || name.untouched">org name is required</small>
+                </div>
+               
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Start Date</label>
+                    <input type="date" #startdate = 'ngModel' class="form-control"required name="startdate"  [(ngModel)]="settings.startdate" >
+                    <small [hidden] = "startdate.valid || startdate.untouched">startdate is required</small>
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Start Time</label>
+                    <input type="time" #starttime = 'ngModel' class="form-control"required name="starttime" [(ngModel)]="settings.starttime">
+                    <small [hidden] = "starttime.valid || starttime.untouched">start time is required</small>
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">End Time</label>
+                    <input type="time" #endtime = 'ngModel' class="form-control"required name="endtime" [(ngModel)]="settings.endtime"   >
+                    <small [hidden] = "endtime.valid || endtime.untouched">end time is required</small>
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+                    <textarea class="form-control" required name="description" [(ngModel)]="settings.description" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Change pic</label>
+                    <input type="file"  class="form-control"   name="Image" (change) ="selectImage($event)" >
+                    <!-- <small [hidden] = "description.valid || description.untouched">description is required</small> -->
+                  </div>
+              
+        
+                
+        
+                <div class="btn-container">
+                
+                  <button type="submit" [disabled] = "form.invalid" class="btn btn-primary mb-3">
+                    <span *ngIf = "show" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    Submit
+                  </button>
+                  <div>
+                    <button class="btn btn-danger mb-3" (click)="deleteOrg()" type="button">Delete Org</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        
+    </section>
+
+
+</main>
+<app-footer></app-footer>

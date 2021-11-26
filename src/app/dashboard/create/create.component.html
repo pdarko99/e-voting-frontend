@@ -1,0 +1,43 @@
+
+<app-headder></app-headder>
+<main>
+
+    <section class="contain">
+        <form #form="ngForm" (ngSubmit)="createOrg()" enctype="multipart/form-data">
+            <small *ngIf="errormsg">{{errormsg}}</small>
+    
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Name of Org</label>
+              <input type="email" #nameField = 'ngModel' class="form-control"  [(ngModel)]="org.name" required name="name"  placeholder="princeOrg">
+              <small [hidden] = "nameField.valid || nameField.untouched">nameField is required</small>
+            </div>
+    
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Description</label>
+              <input type="text" #description = 'ngModel' class="form-control" [(ngModel)]="org.description" required name="pic" placeholder="des">
+              <small [hidden] = "description.valid || description.untouched">description is required</small>
+            </div>
+
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Select img</label>
+              <input type="file"  class="form-control"  required name="Image" (change) ="selectImage($event)" >
+              <!-- <small [hidden] = "description.valid || description.untouched">description is required</small> -->
+            </div>
+
+            
+
+
+    
+            <div class="btn-container">
+            
+              <button type="submit"  class="btn btn-primary mb-3">
+                <span *ngIf="show" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Create Org
+              </button>
+            </div>
+        </form>
+    </section>
+    
+</main>
+
+<app-footer></app-footer>

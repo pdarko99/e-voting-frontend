@@ -1,0 +1,146 @@
+main{
+    position: relative;
+    
+    min-height: 45.46rem;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    
+}
+
+.topmost{
+    width: 80%;
+    margin: auto;
+}
+
+
+nav div ul li a{
+    color: rgb(255, 255, 255);
+}
+
+header{
+    margin-top: 10px;
+
+}
+
+section > header > nav{
+    display:flex;
+    justify-content: space-between;
+}
+
+h2{
+    font-family: Söhne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 2.5rem;
+    line-height: 1.12;
+    font-weight: 500;
+    letter-spacing: 0px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+}
+
+.middle{
+    width: 80%;
+    margin: auto;
+    margin-top: 7em;
+    display: flex;
+    /* min-height: 5rem; */
+}
+
+.col > p{
+    margin: 0px 0px 1.6em;
+    font-family: Söhne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    letter-spacing: 0.01em;
+    font-weight: 400;
+    color: rgb(255, 255, 255); 
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+
+.formContainer{
+    width: 100%;
+    min-height: 25em;
+    /* background-color: yellow; */
+}
+
+.firstlist{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul > li{
+    list-style-type: none;
+}
+
+button{
+    border-radius:20px;
+}
+
+
+
+
+
+.footerlib{
+    text-align: center;
+    font-size: 20px;
+}
+
+.nav-log{
+    border-radius: 20px;
+
+}
+
+.container-fluid > a{
+    color: rgb(255, 255, 255);   
+}
+
+
+/* .animate{
+    animation-duration: 1.5s;
+    animation-name: slidein;
+}
+      
+@keyframes slidein {
+    from {
+        margin-bottom: 100%;
+        width: 300%;
+    }
+
+    to {
+        margin-bottom: 0%;
+        width: 100%;
+    }
+} */
+
+.topmost > a{
+    color:rgb(255, 255, 255) !important;
+}
+
+.row>* {
+    padding-left:0
+}
+@media only screen and (max-width: 800px) {
+
+    .none{
+        display: none;
+    }
+
+ 
+
+    .botbutt{
+        margin-top: 1.5em;
+        margin-bottom: 3em;
+
+    }
+
+    main{
+        min-height: 50rem;
+    }
+}

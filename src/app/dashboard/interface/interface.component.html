@@ -1,0 +1,51 @@
+<main>
+        <section class="upper">
+          <app-headder></app-headder>
+        </section>
+        <section class="ifNo" *ngIf = "(getAllOrg$ | async)?.length ==0">
+            <div>
+                <h4>Hey you have no organization here....start by creating an Org</h4>
+                <div class="but">
+                    <button type="button" [routerLink]="['/create']"  class="btn btn-primary mb-3 btn-lg">Create Org</button>
+    
+                </div>
+            </div>
+        </section>
+    
+        <section  class="middle" >
+  
+            <div class="container" *ngIf = "(getAllOrg$ | async)?.length > 0" @fadeSlideInOut>
+              <div class="butt">
+                <button type="button" [routerLink]="['/create']"  class="btn btn-primary mb-3">Add Org</button>
+    
+            </div>
+              <div class="row justify-content-start" >
+                  <div class="col-md-4 col-sm-12" *ngFor = "let org of getAllOrg$ | async">
+                    <div class="card" style="width: 18rem;">
+                        <img [src]=org.pic class="card-img-top" [alt]=org.name>
+                        <div class="card-body">
+                          <h5 class="card-title">{{org.name}}</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a [routerLink]="['/org',org._id]" class="btn btn-primary">Visit</a>
+                        </div>
+                      </div>
+                  </div>
+                 
+                </div>
+            </div>
+            <div>
+               <div *ngIf = "(getAllOrg$ | async)?.length < 0" >
+                 <div class="loading">
+                   <app-loading></app-loading>
+                 </div>
+                </div>
+            </div>
+           
+          
+        </section>
+    
+
+    <footer>
+        <app-footer></app-footer>
+      </footer>
+</main>

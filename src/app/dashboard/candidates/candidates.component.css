@@ -1,0 +1,84 @@
+main{
+    position: relative;
+    background: rgb(6, 17, 47);
+    color: rgb(255, 255, 255);
+    min-height: 45.46rem;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    text-align: justify;
+
+}
+
+.ifNo{
+    /* width: 90%; */
+    height: 90%;
+    margin:auto
+}
+
+.contain{
+    width:80%;
+    margin:0 auto 0 auto;
+}
+
+
+
+button{
+    border-radius:20px;
+}
+
+table{
+    background: rgb(6, 17, 60);
+    color: rgb(255, 255, 255);
+    width: 100%;
+    
+
+}
+.del{
+    background-color: red !important;
+}
+
+.but{
+    text-align: center;
+}
+
+.butt{
+    text-align: right;
+}
+
+.error{
+    text-align: center;
+}
+
+
+img{
+    width: 30px;
+    height: 30px;
+    border-radius:50%;
+}
+
+
+.modal-content{
+        background: rgb(6, 17, 60);
+}
+
+@media only screen and (max-width: 800px) {
+    .modal{
+        min-height: 5rem;
+        margin-top:5rem;
+    }
+
+    .example-container {
+        /* height: 600px; */
+        width: 350px;
+        max-width: 100%;
+        overflow: auto;
+      }
+
+      .ifNo{
+          width: 80%;
+          margin: auto;
+          text-align: center;
+      }
+    
+}

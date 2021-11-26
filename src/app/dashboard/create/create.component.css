@@ -1,0 +1,49 @@
+main{
+    position: relative;
+    background: rgb(6, 17, 47);
+    color: rgb(255, 255, 255);
+    min-height: 45.46rem;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+}
+
+.contain{
+    background: rgb(6, 17, 60);
+    margin: auto;
+    width:40%;
+    min-height: 25rem;
+    display: flex;
+    align-items: center;
+}
+
+button{
+    border-radius:20px;
+    width: 50%;
+}
+
+form{
+    width: 80%;
+    margin: auto;
+    
+}
+
+.btn-container{
+    margin-top: 20px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 800px) {
+    main{
+        min-height: 51.46rem;
+    }
+
+    .contain{
+      
+        width:80%;
+        min-height: 20rem;
+        
+    }
+
+
+}

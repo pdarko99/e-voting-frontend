@@ -1,0 +1,51 @@
+
+<app-headder></app-headder>
+<main>
+    <section>
+        <div class="card">
+            <div class="card-body">
+              <!-- <h5 class="card-title">LOGIN FORM</h5> -->
+              <form action="" #form="ngForm" (ngSubmit) ="Submit()">
+                <span *ngIf="errorOrConfrimsg">{{errorOrConfrimsg}}</span>
+        
+                <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label">Fullname</label>
+                  <input type="email"  #name = 'ngModel'  class="form-control"required name="name" [(ngModel)]="update.fullname"  placeholder="princeOrg">
+                  <!-- <small [hidden] = "name.valid || name.untouched">org name is required</small> -->
+                </div>
+               
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Email</label>
+                    <input type="Email"  class="form-control"required name="Email"  [(ngModel)]="update.email" >
+                    <!-- <small [hidden] = "startdate.valid || startdate.untouched">startdate is required</small> -->
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Password</label>
+                    <input type="password" #password = 'ngModel' [(ngModel)]="update.password" class="form-control" name="password">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Confirm Password</label>
+                    <input type="password" #Cpassword = 'ngModel'[(ngModel)]="update.confirmPassword" class="form-control" name="confirmPassword"  >
+                  </div>
+                 
+              
+        
+                
+        
+                <div class="btn-container">
+                
+                  <button type="submit" [disabled] = "form.invalid" class="btn btn-primary mb-3">
+                    <span *ngIf = "show" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    Submit
+                  </button>
+                
+                </div>
+              </form>
+            </div>
+          </div>
+        
+    </section>
+
+
+</main>
+<app-footer></app-footer>
