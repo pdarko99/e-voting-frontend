@@ -3,7 +3,7 @@
 </section>
 <main>
 
-    <section *ngIf = "(votersWithAdded$ | async)?.length ==0">
+    <section class="look" *ngIf = "(votersWithAdded$ | async)?.length ==0">
         <p *ngIf="ermsg">{{ermsg}}</p>
         <div>
             <h3>we recommend uploading a .txt file containing the list of voters</h3>

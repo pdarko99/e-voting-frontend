@@ -19,16 +19,16 @@ export class HomeComponent implements OnInit {
   }
   
   login($element: any){
+    this.router.navigate(['login'])
     this.none = 'block';
     $element.scrollIntoView({behaviour: 'smooth', block: 'start', inline: 'nearest'})
-    this.router.navigate(['login'])
   }
 
   register($element: any){
 
+    this.router.navigate(['register'])
     this.none = 'block';
     $element.scrollIntoView({behaviour: 'smooth', block: 'start', inline: 'nearest'})
-    this.router.navigate(['register'])
   }
 
 }

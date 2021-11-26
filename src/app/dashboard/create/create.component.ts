@@ -34,14 +34,15 @@ export class CreateComponent implements OnInit {
   createOrg(): void{
     // console.log(this.org)
     // console.log(this.registerForm?.value)
+    this.show = true
     const formdata = new FormData()
     formdata.append('Image', this.org.Image)
     formdata.append('name', this.org.name)
     formdata.append('description', this.org.description)
     formdata.append('pic', 'heool')
     this.orgservice.createOrg(formdata).subscribe(
-      res => {this.router.navigate(['dashboard'])},
-      err => console.log(err)
+      res => {this.show = false; this.router.navigate(['dashboard'])},
+      err => {this.errormsg = err; console.log(err); this.show = false}
     )
   }
 

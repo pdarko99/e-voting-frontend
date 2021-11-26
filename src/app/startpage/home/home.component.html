@@ -23,10 +23,10 @@
       <div class="col-md-6 col-sm-12">
         <h2 >Say hello to  a better voting 3xperience.</h2>
         <p class="animate">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta, vitae Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, veritatis. </p>
-        <button  type="button" (click)="login(auth)" class="btn botbutt btn-primary btn-lg">start building -- it's free</button>
+        <button  type="button"  (click)="login(auth)" class="btn botbutt btn-primary btn-lg">start building -- it's free</button>
       </div>
-      <div class="col-md-6 col-sm-12 none" [ngStyle]="{'display':none}">
-        <div class="formContainer" #auth>
+      <div class="col-md-6 col-sm-12" #auth [ngStyle]="{'display':none}">
+        <div class="formContainer">
           <router-outlet ></router-outlet>
         </div>
       </div>

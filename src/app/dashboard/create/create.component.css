@@ -34,14 +34,12 @@ form{
 }
 
 @media only screen and (max-width: 800px) {
-    main{
-        min-height: 51.46rem;
-    }
+   
 
     .contain{
       
         width:80%;
-        min-height: 20rem;
+        min-height: 25rem;
         
     }
 

@@ -14,8 +14,13 @@ section{
     margin: auto;
 }
 
+.look{
+    width: 80%;
+    margin: auto;
+}
 .but{
     text-align:center;
+    margin-top: 30px;
 }
 
 .contain{
