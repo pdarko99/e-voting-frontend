@@ -52,7 +52,8 @@ export class SettingsComponent implements OnInit {
     formdata.append('endtime', this.settings.endtime)
 
     this.orgservice.updateOrg(this.name, formdata).subscribe(
-      res => this.show = false
+      res => {this.show = false; this.errorOrConfrimsg = 'updated successfully'},
+      err => {this.show = false; this.errorOrConfrimsg = 'an error occured please try agian later'}
     )
   }
 

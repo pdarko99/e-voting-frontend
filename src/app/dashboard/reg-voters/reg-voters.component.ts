@@ -32,6 +32,8 @@ export class RegVotersComponent implements OnInit {
   }
 
   show = false
+  shown = false
+  emails!: string;
   constructor(private orgservice:OrgService, private route: ActivatedRoute, private router: Router) { }
 
   getVoters$ = this.orgservice.getVoters(this.name).pipe(
@@ -148,6 +150,21 @@ export class RegVotersComponent implements OnInit {
       email: this.voterInfo.email
     }
     return voter
+  }
+
+  sendEmails(){
+    this.shown = true
+    this.emails = 'sending emails'
+    this.orgservice.sendEmails(this.name).subscribe(
+      res => {
+        this.shown = false;
+        this.emails = res.message
+      },
+      err => {
+        this.shown = false;
+        this.emails = err
+      }
+    )
   }
 
 }

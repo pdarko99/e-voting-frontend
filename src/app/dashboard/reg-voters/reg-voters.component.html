@@ -50,7 +50,13 @@
           </table>
         </div>
   
-          
+        <div class="butt">
+          <p *ngIf="emails">{{emails}}</p>
+          <button type="submit"  class="btn btn-primary mb-3" (click)="sendEmails()">
+              <span *ngIf="shown" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+              send Emails
+          </button>
+      </div>
     
       </section>
   

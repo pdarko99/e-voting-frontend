@@ -19,6 +19,13 @@ export class OrgService {
   }
 
 
+  sendEmails(id: string): Observable<any>{
+    return this.http.get<any>(this.url + '/Organization/emails'+ '?key=' + id).pipe(
+      catchError(this.handleError)
+    )
+  }
+
+
   getAllOrg(): Observable<any>{
     return this.http.get<any>(this.url + '/Organization')
     .pipe(
