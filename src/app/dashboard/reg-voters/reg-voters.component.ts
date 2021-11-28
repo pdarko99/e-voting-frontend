@@ -157,10 +157,12 @@ export class RegVotersComponent implements OnInit {
     this.emails = 'sending emails'
     this.orgservice.sendEmails(this.name).subscribe(
       res => {
+        console.log(res)
         this.shown = false;
         this.emails = res.message
       },
       err => {
+        console.log(err)
         this.shown = false;
         this.emails = err
       }
