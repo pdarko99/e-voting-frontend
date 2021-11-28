@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  url: "https://shrouded-reef-90177.herokuapp.com"
+  url: "https://defiant-ivy-beat.glitch.me"
 };
