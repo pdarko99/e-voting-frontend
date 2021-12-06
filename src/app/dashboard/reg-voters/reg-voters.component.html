@@ -6,7 +6,7 @@
     <section class="look" *ngIf = "(votersWithAdded$ | async)?.length ==0">
         <p *ngIf="ermsg">{{ermsg}}</p>
         <div>
-            <h3>we recommend uploading a .txt file containing the list of voters</h3>
+            <h3>we recommend uploading a .txt file containing the list of voters in the other(firstname,lastname,email) yh separated by comma</h3>
             <input type="file"   required name="Image" (change) ="selectImage($event)" >
         </div>
         <div class="but">
