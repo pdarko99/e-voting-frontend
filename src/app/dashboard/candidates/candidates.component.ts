@@ -11,6 +11,7 @@ import { OrgService } from '../org.service';
   styleUrls: ['./candidates.component.css']
 })
 export class CandidatesComponent implements OnInit {
+  
   updateFlag = false
   display= 'none'
   private candidatesId!: string
@@ -71,13 +72,14 @@ export class CandidatesComponent implements OnInit {
 
   onCloseHandled(): void{
     this.display = "none"
+    
   }
 
   onSubmit(form:NgForm): void{
     this.show = true
     if(this.updateFlag){
       this.orgservice.updateCandidate(this.candidatesId, this.candiateCred).subscribe(
-        res => {this.errorOrConfrimsg = res.message; this.show = false},
+        res => {this.errorOrConfrimsg = res.message; this.show = false;},
         err => {this.errorOrConfrimsg = err; this.show = false}
       )
       

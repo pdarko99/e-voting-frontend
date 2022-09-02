@@ -21,7 +21,7 @@ export class AuthGuard implements CanActivate, CanLoad {
   checkLoggedIn(): boolean{
     if(localStorage.getItem('token') ){
       //run through to check if the user truely exists in the database with the help of ger user 
-      // function in the auth service but i'm tired :( so we just check for token
+      // function in the auth service
       return true
     }
     this.router.navigate(['/'])
