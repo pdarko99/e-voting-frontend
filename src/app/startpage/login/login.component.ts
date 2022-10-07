@@ -35,8 +35,6 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
-
  loginUser(): void{
     if(this.isValid){
       this.show = true

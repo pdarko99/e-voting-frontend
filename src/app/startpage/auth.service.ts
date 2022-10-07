@@ -3,7 +3,7 @@ import {HttpClient, HttpErrorResponse} from "@angular/common/http";
 import { Observable, throwError } from 'rxjs';
 import { Ilogin, Iregister } from './interface';
 import { catchError } from 'rxjs/operators';
-import {environment} from "../../environments/environment"
+import {environment} from "../../environments/environment.prod"
 
 
 
